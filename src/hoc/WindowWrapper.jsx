@@ -1,4 +1,4 @@
-import useWindowStore from "#store/Window";
+import useWindowStore from "#store/window";
 import { useGSAP } from "@gsap/react";
 import { useLayoutEffect, useRef } from "react";
 import { Draggable } from "gsap/Draggable";
