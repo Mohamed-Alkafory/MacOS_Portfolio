@@ -66,15 +66,15 @@ function Welcom() {
   }, []);
   return (
     <section id="welcome">
-      <p ref={titleRef}>
+      <p ref={subtitleRef}>
         {renderText(
           "Hi, I'm Mohamed Alkafory! Welcome to my",
           "text-3xl font-georama",
           100,
         )}
       </p>
-      <h1 ref={subtitleRef} className="mt-7">
-        {renderText("Portfolio", "text-9xl italic font-georama", 100)}
+      <h1 ref={titleRef} className="mt-7">
+        {renderText("Portfolio", "text-9xl italic font-georama", 400)}
       </h1>
       <div className="small-screen">
         <p>this Portfolio is designed for desktop/tablet screens only. </p>
