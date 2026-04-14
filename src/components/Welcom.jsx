@@ -77,7 +77,7 @@ function Welcom() {
         {renderText("Portfolio", "text-9xl italic font-georama", 100)}
       </h1>
       <div className="small-screen">
-        <p>this Portfolio is designed for desktop/tabled screens only. </p>
+        <p>this Portfolio is designed for desktop/tablet screens only. </p>
       </div>
     </section>
   );
