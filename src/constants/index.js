@@ -105,6 +105,10 @@ const techStack = [
     items: ["React.js", "JavaScript", "TypeScript"],
   },
   {
+    category: "Mobile",
+    items: ["React Native"],
+  },
+  {
     category: "Styling",
     items: ["Tailwind CSS", "Sass", "CSS"],
   },
