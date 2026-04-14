@@ -1,4 +1,4 @@
 import Navbar from "./Navbar";
 import Welcom from "./Welcom";
-
-export { Navbar, Welcom };
+import Dock from "./Dock";
+export { Navbar, Welcom, Dock };
