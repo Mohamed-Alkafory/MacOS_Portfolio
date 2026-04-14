@@ -58,7 +58,7 @@ function Dock() {
               aria-label={name}
               data-tooltip-id="dock-tooltip"
               data-tooltip-content={name}
-              data-tooltio-delay-show={150}
+              data-tooltip-delay-show={150}
               disabled={!canOpen}
               onClick={() => toggleApp({ id, name })}
             >
