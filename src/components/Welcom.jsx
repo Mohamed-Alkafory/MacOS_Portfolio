@@ -2,7 +2,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 const FONT_WEIGHT = {
-  subtitle: { min: 100, max: 400, default: 100 },
+  subtitle: { min: 200, max: 500, default: 200 },
   title: { min: 400, max: 900, default: 400 },
 };
 
@@ -69,8 +69,8 @@ function Welcom() {
       <p ref={subtitleRef}>
         {renderText(
           "Hi, I'm Mohamed Alkafory! Welcome to my",
-          "text-3xl font-georama",
-          100,
+          "text-3xl font-georama drop-shadow-lg",
+          200,
         )}
       </p>
       <h1 ref={titleRef} className="mt-7">
