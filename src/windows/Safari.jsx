@@ -11,7 +11,7 @@ import {
   Copy,
   MoveRight,
 } from "lucide-react";
-import { blogPosts } from "#constants";
+// import { blogPosts } from "#constants";
 const Safari = () => {
   return (
     <>
@@ -40,13 +40,16 @@ const Safari = () => {
         </div>
       </div>
       <div className="flex-1 flex flex-col items-center justify-center text-center p-20 space-y-4">
-        <div className="bg-gray-100 p-6 rounded-full">
-          <ShieldHalf className="size-12 text-gray-300" />
+        <div className="bg-gray-100 p-6 rounded-full dark:bg-zinc-800">
+          <ShieldHalf className="size-12 text-gray-300 " />
         </div>
         <div className="space-y-1">
-          <h2 className="text-xl font-semibold text-gray-800">No Articles Yet</h2>
-          <p className="text-sm text-gray-500 max-w-xs">
-            I'm currently drafting some deep dives into React, GSAP, and modern web design. Stay tuned!
+          <h2 className="text-xl font-semibold text-gray-800 dark:text-zinc-100">
+            No Articles Yet
+          </h2>
+          <p className="text-sm text-gray-500 max-w-xs dark:text-zinc-500 mt-1">
+            I'm currently drafting some deep dives into React, GSAP, and modern
+            web design. Stay tuned!
           </p>
         </div>
       </div>
