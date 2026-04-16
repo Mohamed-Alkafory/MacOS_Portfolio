@@ -36,10 +36,11 @@ const Terminal = () => {
         </ul>
         <div className="footnote">
           <p>
-            <Check size={20} />5 of 5 stack loaded successfully (100%)
+            <Check size={20} className="text-green-500" />5 of 5 stack loaded
+            successfully (100%)
           </p>
-          <p className="text-black">
-            <Flag size={15} fill="black" />
+          <p className="text-black dark:text-white">
+            <Flag size={15} fill="black" className="dark:fill-white" />
             Render time: 6ms
           </p>
         </div>

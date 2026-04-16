@@ -9,12 +9,14 @@ import {
   Contact,
   Photos,
 } from "#windows";
+import useDarkMode from "#store/useDarkMode";
 import { Draggable } from "gsap/Draggable";
 import gsap from "gsap";
 gsap.registerPlugin(Draggable);
 function App() {
+  const { isDark } = useDarkMode();
   return (
-    <main>
+    <main className={isDark ? "dark" : ""}>
       <Navbar />
       <Welcom />
       <Home />
