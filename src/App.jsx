@@ -8,6 +8,7 @@ import {
   ImageFile,
   Contact,
   Photos,
+  PdfFile,
 } from "#windows";
 import useDarkMode from "#store/useDarkMode";
 import { Draggable } from "gsap/Draggable";
@@ -29,6 +30,7 @@ function App() {
       <ImageFile />
       <Contact />
       <Photos />
+      <PdfFile />
     </main>
   );
 }

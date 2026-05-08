@@ -166,7 +166,7 @@ const photosLinks = [
   {
     id: 2,
     icon: "/icons/gicon2.svg",
-    title: "Memories",
+    title: "Certificates",
   },
   {
     id: 3,
@@ -204,6 +204,79 @@ const gallery = [
   },
 ];
 
+const certificates = [
+  {
+    id: 1,
+    name: "Programming Foundations Level 1",
+    path: "/certificates/1-Programming-foundations-level-1.pdf",
+  },
+  {
+    id: 2,
+    name: "Algorithms & Problem Solving Level 1",
+    path: "/certificates/2-Algorithms-problem-solving-level-1.pdf",
+  },
+  {
+    id: 3,
+    name: "Introduction to Programming using C++ Level 1",
+    path: "/certificates/3-Introduction-to-programming-using-c-level-1.pdf",
+  },
+  {
+    id: 4,
+    name: "Algorithms & Problem Solving Level 1 Solutions",
+    path: "/certificates/4-Algorithms-problem-solving-level-1-solutions.pdf",
+  },
+  {
+    id: 5,
+    name: "Algorithms & Problem Solving Level 2",
+    path: "/certificates/5-Algorithms-problem-solving-level-2.pdf",
+  },
+  {
+    id: 6,
+    name: "Introduction to Programming using C++ Level 2",
+    path: "/certificates/6-Introduction-to-programming-using-c-level-2.pdf",
+  },
+  {
+    id: 7,
+    name: "Foundations Level 2",
+    path: "/certificates/9-Foundations-level-2.pdf",
+  },
+  {
+    id: 8,
+    name: "OOP As It Should Be Concepts",
+    path: "/certificates/10-oop-as-it-should-be-concepts.pdf",
+  },
+  {
+    id: 9,
+    name: "Data Structures Level 1",
+    path: "/certificates/12-Data-structures-level1.pdf",
+  },
+  {
+    id: 10,
+    name: "C++ Essentials 1",
+    path: "/certificates/CEssentials1Update20250610-27-h5jczm.pdf",
+  },
+  {
+    id: 11,
+    name: "HTML & CSS",
+    path: "/certificates/Course_Certificate_En.pdf",
+  },
+  {
+    id: 12,
+    name: "HTML Udemy",
+    path: "/certificates/HTML-Udemy.pdf",
+  },
+  {
+    id: 13,
+    name: "Intermediate Git",
+    path: "/certificates/certificate (1).pdf",
+  },
+  {
+    id: 14,
+    name: "Introduction To Git",
+    path: "/certificates/certificate.pdf",
+  },
+];
+
 export {
   navLinks,
   navIcons,
@@ -213,6 +286,7 @@ export {
   socials,
   photosLinks,
   gallery,
+  certificates,
 };
 
 const WORK_LOCATION = {
@@ -281,7 +355,7 @@ const WORK_LOCATION = {
       name: "Fast React Pizza Co",
       icon: "/images/folder.png",
       kind: "folder",
-      position: "top-52 right-80",
+      position: "top-52 right-100",
       windowPosition: "top-[20vh] left-7",
       children: [
         {
@@ -368,6 +442,59 @@ const WORK_LOCATION = {
           fileType: "img",
           position: "top-52 right-80",
           imageUrl: "/images/project_3.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+          position: "top-60 right-20",
+        },
+      ],
+    },
+
+    // ▶ Project 4
+    {
+      id: 8,
+      name: "RoomiFY",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-40",
+      windowPosition: "top-[48vh] left-7",
+      children: [
+        {
+          id: 1,
+          name: "RoomiFY.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "RoomiFY is a modern architectural visualization platform that transforms empty spaces into stunning, fully designed interiors through immersive and cinematic experiences.",
+            "Instead of static room concepts, it allows users to explore beautifully crafted modern spaces with smooth interactions, premium visuals, and realistic design inspiration.",
+            "Think of it as a digital interior experience where architecture, design, and technology blend together in one elegant platform.",
+            "Built with React, Tailwind CSS, Framer Motion, and modern UI principles, RoomiFY delivers smooth animations, responsive layouts, and a clean high-end user experience.",
+          ],
+        },
+        {
+          id: 2,
+          name: "RoomiFY.repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/Mohamed-Alkafory/roomiFY",
+          position: "top-10 right-20",
+        },
+        {
+          id: 4,
+          name: "RoomiFY.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/project_4.png",
         },
         {
           id: 5,
@@ -501,6 +628,7 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  pdffile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

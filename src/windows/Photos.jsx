@@ -1,10 +1,31 @@
 import WindowWrapper from "#hoc/WindowWrapper";
 import { WindowControls } from "#components";
-import { Mail, Search, Share2, Heart, Plus } from "lucide-react";
-import { gallery, photosLinks } from "#constants";
+import { Mail, Search, Share2, Heart, Plus, FileText } from "lucide-react";
+import { gallery, photosLinks, certificates } from "#constants";
+import { pdfjs, Document, Page } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 import useWindowStore from "#store/window";
 import { useState } from "react";
 import clsx from "clsx";
+
+const PdfThumbnail = ({ path }) => {
+  return (
+    <div className="size-full overflow-hidden flex items-center justify-center bg-white pointer-events-none scale-110">
+      <Document
+        file={path}
+        loading={<div className="size-full bg-gray-100 animate-pulse" />}
+      >
+        <Page
+          pageNumber={1}
+          width={180}
+          renderTextLayer={false}
+          renderAnnotationLayer={false}
+        />
+      </Document>
+    </div>
+  );
+};
 
 const Photos = () => {
   const { openWindow } = useWindowStore();
@@ -138,6 +159,23 @@ const Photos = () => {
                       View Photo
                     </span>
                   </div>
+                </li>
+              ))}
+            </ul>
+          ) : activeTab === 2 ? (
+            <ul className="grid grid-cols-4 gap-4 overflow-y-auto h-[420px] pr-2 custom-scrollbar">
+              {certificates.map(({ id, name, path }) => (
+                <li
+                  key={id}
+                  onClick={() => openWindow("pdffile", { id, name, path })}
+                  className="flex flex-col items-center gap-2 p-3 rounded-2xl bg-gray-50/50 dark:bg-zinc-800/30 hover:bg-white dark:hover:bg-zinc-800 cursor-pointer transition-all border border-gray-100 dark:border-zinc-700/50 hover:border-blue-500 dark:hover:border-blue-500 shadow-sm hover:shadow-md group"
+                >
+                  <div className="size-24 flex items-center justify-center bg-white dark:bg-zinc-700 rounded-xl shadow-inner group-hover:scale-105 transition-all overflow-hidden border border-gray-100 dark:border-zinc-600">
+                    <PdfThumbnail path={path} />
+                  </div>
+                  <span className="text-[10px] font-semibold text-gray-600 dark:text-zinc-400 text-center line-clamp-2 px-1">
+                    {name}
+                  </span>
                 </li>
               ))}
             </ul>
