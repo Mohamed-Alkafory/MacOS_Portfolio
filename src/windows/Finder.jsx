@@ -7,14 +7,21 @@ import clsx from "clsx";
 import useWindowStore from "#store/window";
 import { useEffect } from "react";
 
-const Finder = ({ isOpen }) => {
+const Finder = ({ isOpen, data }) => {
   const { openWindow } = useWindowStore();
-  const { activeLocation, setActiveLocation, resetActiveLocation } = useLocationStore();
+  const { activeLocation, setActiveLocation, resetActiveLocation } =
+    useLocationStore();
 
   // Sync with fresh constants whenever window opens
   useEffect(() => {
-    if (isOpen) resetActiveLocation();
-  }, [isOpen]);
+    if (isOpen) {
+      if (data) {
+        setActiveLocation(data);
+      } else {
+        resetActiveLocation();
+      }
+    }
+  }, [isOpen, data, setActiveLocation, resetActiveLocation]);
   const RenderList = (name, item) => (
     <div>
       <h3>{name}</h3>
