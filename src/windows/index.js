@@ -6,6 +6,7 @@ import TextFile from "./TextFile";
 import ImageFile from "./ImageFile";
 import Contact from "./Contact";
 import Photos from "./Photos";
+import PdfFile from "./PdfFile";
 export {
   Terminal,
   Safari,
@@ -15,4 +16,5 @@ export {
   ImageFile,
   Contact,
   Photos,
+  PdfFile,
 };

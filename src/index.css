@@ -149,6 +149,16 @@ main.dark {
     }
   }
 
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-300/50 dark:bg-zinc-700/50 rounded-full;
+  }
+
   #window-header {
     @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
   }
@@ -567,6 +577,15 @@ main.dark {
     .preview {
       @apply bg-zinc-800;
     }
+  }
+
+  /* ── Dark mode: PdfFile ── */
+  #pdffile {
+    @apply w-fit h-fit max-w-[90vw] max-h-[90vh] absolute top-10 left-1/2 -translate-x-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden border border-gray-200;
+  }
+
+  main.dark #pdffile {
+    @apply bg-zinc-900 border border-zinc-700;
   }
 
   #home {
