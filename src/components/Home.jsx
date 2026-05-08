@@ -10,8 +10,7 @@ const Home = () => {
   const { openWindow } = useWindowStore();
   const { setActiveLocation } = useLocationStore();
   const handleOpenProjectFinder = (project) => {
-    setActiveLocation(project);
-    openWindow("finder");
+    openWindow("finder", project);
   };
   useGSAP(() => {
     Draggable.create(".folder");
