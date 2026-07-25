@@ -275,6 +275,26 @@ const certificates = [
     name: "Introduction To Git",
     path: "/certificates/certificate.pdf",
   },
+  {
+    id: 15,
+    name: "AI Fluency - Framework & Foundations",
+    path: "/certificates/AI Fluency-Framework&Foundations.pdf",
+  },
+  {
+    id: 16,
+    name: "Claude 101",
+    path: "/certificates/Claude 101.pdf",
+  },
+  {
+    id: 17,
+    name: "Claude Code 101",
+    path: "/certificates/Claude Code 101.pdf",
+  },
+  {
+    id: 18,
+    name: "Claude Code in Action",
+    path: "/certificates/Claude Code in Action.pdf",
+  },
 ];
 
 export {
@@ -504,6 +524,58 @@ const WORK_LOCATION = {
           fileType: "fig",
           href: "https://google.com",
           position: "top-60 right-20",
+        },
+      ],
+    },
+    // ▶ Project 5
+    {
+      id: 9,
+      name: "HOMI",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-52 left-40",
+      windowPosition: "top-[5vh] left-50",
+      children: [
+        {
+          id: 1,
+          name: "HOMI.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-10",
+          description: [
+            "HOMI is a full-stack architectural platform where users can discover, compare, and purchase house plans while instantly estimating their construction budget, all in one seamless experience.",
+            "Instead of juggling multiple sites and manual calculators, HOMI brings the entire journey together: browsing categorized plans, comparing specifications side by side, and checking out securely.",
+            "A dedicated admin dashboard gives full control over plans, orders, and content, making it a production-ready platform built for real-world deployment.",
+            "Built with React 19, Supabase, PostgreSQL, Tailwind CSS v4, GSAP ScrollTrigger, and Framer Motion, HOMI delivers a cinematic, animation-rich experience backed by a secure, scalable database.",
+          ],
+        },
+        {
+          id: 2,
+          name: "HOMI.repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/Mohamed-Alkafory/Depi-Project",
+          position: "top-10 right-20",
+        },
+        {
+          id: 3,
+          name: "HOMI.demo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://hommi-app.vercel.app/",
+          position: "top-60 right-20",
+        },
+        {
+          id: 4,
+          name: "HOMI.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          position: "top-52 right-80",
+          imageUrl: "/images/project_5.png",
         },
       ],
     },
